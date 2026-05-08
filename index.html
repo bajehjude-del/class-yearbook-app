@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Yearbook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 Class Yearbook</h1>
+    <p>Capture every student's story</p>
+  </header>
+
+  <main class="container">
+    <!-- Add Student Form -->
+    <section class="form-section">
+      <h2>Add a Student</h2>
+      <form id="student-form">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="text" id="snack" placeholder="Favorite Snack" required />
+        <input type="text" id="fact" placeholder="Fun Fact" required />
+        <input type="url" id="image" placeholder="Image URL (optional)" />
+        <button type="submit">Add to Yearbook</button>
+      </form>
+    </section>
+
+    <!-- Student Cards Grid -->
+    <section id="cards-grid" class="cards-grid"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

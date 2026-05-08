@@ -1,0 +1,153 @@
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f0f4f8;
+  color: #2d3748;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+header h1 { font-size: 2.5rem; letter-spacing: -0.5px; }
+header p  { margin-top: 0.4rem; opacity: 0.85; font-size: 1rem; }
+
+/* ── Layout ── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ── Form Section ── */
+.form-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 2.5rem;
+}
+
+.form-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #4a5568;
+}
+
+#student-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+#student-form input {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+#student-form input:focus { border-color: #667eea; }
+
+#student-form button {
+  grid-column: 1 / -1;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+#student-form button:hover  { opacity: 0.9; }
+#student-form button:active { transform: scale(0.98); }
+
+/* ── Cards Grid ── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Student Card ── */
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #e2e8f0;
+}
+
+.card-body { padding: 1.1rem; }
+
+.card-body h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+.card-body p {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 0.25rem;
+}
+
+.card-body p span { font-weight: 600; color: #4a5568; }
+
+/* ── Card Actions ── */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 0.45rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-edit   { background: #ebf4ff; color: #3182ce; }
+.btn-delete { background: #fff5f5; color: #e53e3e; }
+
+.card-actions button:hover { opacity: 0.75; }
+
+/* ── Empty State ── */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #a0aec0;
+  font-size: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  header h1 { font-size: 1.8rem; }
+  .form-section { padding: 1.25rem; }
+}
